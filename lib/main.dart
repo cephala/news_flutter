@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:splashscreen/splashscreen.dart';
 import 'views/home.dart';
 
 void main() {
@@ -15,7 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home: Home(),
+      home: SplashScreen(
+        seconds: 3,
+        navigateAfterSeconds: Home(),
+        title: Text('NewsSwen', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+        loaderColor: Colors.red,
+        ),
     );
   }
 }
