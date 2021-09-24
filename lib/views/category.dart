@@ -61,7 +61,13 @@ class _CategoryState extends State<Category> {
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
-                    Container(margin: EdgeInsets.symmetric(vertical: 10), child: Text(widget.category.toUpperCase(), style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),)),
+                    Container(
+                        margin: EdgeInsets.symmetric(vertical: 10),
+                        child: Text(
+                          widget.category.toUpperCase(),
+                          style: TextStyle(
+                              fontSize: 18, fontStyle: FontStyle.italic),
+                        )),
                     Container(
                         child: ListView.builder(
                       shrinkWrap: true,
@@ -73,6 +79,7 @@ class _CategoryState extends State<Category> {
                             title: articles[index].title,
                             author: articles[index].author,
                             url: articles[index].articleUrl,
+                            content: articles[index].content,
                             desc: articles[index].description);
                       },
                     ))
