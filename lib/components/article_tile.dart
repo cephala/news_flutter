@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:news_flutter/views/article_detail.dart';
 
 class ArticleTile extends StatelessWidget {
-  final imageUrl, title, desc, author, url;
+  final imageUrl, title, desc, author, url, content;
   ArticleTile(
       {required this.imageUrl,
       required this.title,
       required this.desc,
       required this.author,
-      required this.url});
+      required this.url,
+      required this.content});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ArticleDetail(articleUrl: url,)));
+            context, MaterialPageRoute(builder: (context) => ArticleDetail(articleUrl: url, content: content,)));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 5),

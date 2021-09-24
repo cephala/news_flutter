@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleDetail extends StatefulWidget {
-  final articleUrl;
+  final articleUrl, content;
 
-  ArticleDetail({this.articleUrl});
+  ArticleDetail({this.articleUrl, this.content});
 
   @override
   _ArticleDetailState createState() => _ArticleDetailState();
@@ -16,6 +16,7 @@ class _ArticleDetailState extends State<ArticleDetail> {
   final Completer<WebViewController> _completer =
       Completer<WebViewController>();
 
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -18,7 +18,7 @@ class News {
         if (element['urlToImage'] != null &&
             element['description'] != null &&
             element['author'] != null &&
-            element['description'] != null) {
+            element['description'] != null && element['content'] != null) {
           ArticleModel article = ArticleModel(
             title: element['title'],
             author: element['author'],
@@ -49,7 +49,7 @@ class CategoryNews {
         if (element['urlToImage'] != null &&
             element['description'] != null &&
             element['author'] != null &&
-            element['description'] != null) {
+            element['description'] != null && element['content'] != null) {
           ArticleModel article = ArticleModel(
             title: element['title'],
             author: element['author'],

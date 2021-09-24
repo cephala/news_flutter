@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 import 'package:news_flutter/components/article_tile.dart';
 import 'package:news_flutter/helper/data_category.dart';
 import 'package:news_flutter/helper/news.dart';
 import 'package:news_flutter/model/article_model.dart';
 import 'package:news_flutter/model/category_model.dart';
-import 'dart:convert';
 
-import 'package:news_flutter/views/article_detail.dart';
 import 'package:news_flutter/views/category.dart';
 
 class Home extends StatefulWidget {
@@ -94,6 +91,7 @@ class _HomeState extends State<Home> {
                             title: articles[index].title,
                             author: articles[index].author,
                             url: articles[index].articleUrl,
+                            content: articles[index].content,
                             desc: articles[index].description);
                       },
                     ))
